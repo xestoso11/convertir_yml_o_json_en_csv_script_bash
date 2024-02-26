@@ -1,9 +1,24 @@
+# Como funciona el script
 
-# Encriptado de contraseñas
-https://bcrypt-generator.com/
-
-# Generar certificados autofirmados
-openssl req -x509 -sha256 -newkey rsa:2048 -keyout xestoso11.key -out xestoso11.crt -days 1024 -nodes
+Selecionas la parte o partes del json que quieres y los mandas todos a un archivo
 <br>
-Los certificados tienen que estar en un carpeta que se llama certs, a la altura del resto de carpetas.
+
+```bash
+jq ".[].nombre" ejemplo.json > nombre.tmp
+jq -r ".[].edad" ejemplo.json > edad.tmp
+```
+<br>
+Defines los nombres de las columnas del csv y creas el archivo
+<br>
+
+```bash
+echo "nombre;edad" > persona.csv
+```
+<br>
+Generes el csv con dos documentos que 
+
+```bash
+paste -d ";" nombre.tmp edad.tmp >> persona.csv
+```
+
 
