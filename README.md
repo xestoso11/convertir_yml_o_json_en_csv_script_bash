@@ -21,4 +21,10 @@ Agregas al csv los datos, con los documentos que contienen los datos que sacaste
 paste -d ";" nombre.tmp edad.tmp >> persona.csv
 ```
 
+# Enlaces de interes
 
+## yq
+https://github.com/mikefarah/yq/tree/master
+
+## jq
+https://www.baeldung.com/linux/jq-command-json
