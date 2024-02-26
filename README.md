@@ -15,7 +15,7 @@ Defines los nombres de las columnas del csv y creas el archivo
 echo "nombre;edad" > persona.csv
 ```
 <br>
-Generes el csv con dos documentos que 
+Generes el csv con dos documentos que contienen los datos que sacaste del json en el primer paso
 
 ```bash
 paste -d ";" nombre.tmp edad.tmp >> persona.csv
